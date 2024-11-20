@@ -26,6 +26,7 @@ public class GamePanel extends JPanel implements Runnable {
     int playerX = 100;
     int playerY = 100;
     int playerSpeed = 4;
+    int strafSpeed = 3;
 
     public GamePanel() {
 
@@ -79,8 +80,21 @@ public class GamePanel extends JPanel implements Runnable {
     }
 
     public void update() {
+        if (keyH.upPressed == true & keyH.rightPressed == true) {
+            playerY -= strafSpeed;
+            playerX += strafSpeed;
+        } else if (keyH.upPressed == true & keyH.leftPressed == true) {
+            playerY -= strafSpeed;
+            playerX -= strafSpeed;
+        } else if (keyH.downPressed == true & keyH.rightPressed == true) {
+            playerY += strafSpeed;
+            playerX += strafSpeed;
+        } else if (keyH.downPressed == true & keyH.leftPressed == true) {
+            playerY += strafSpeed;
+            playerX -= strafSpeed;
+        }
 
-        if (keyH.upPressed == true) {
+        else if (keyH.upPressed == true) {
             playerY -= playerSpeed;
         } else if (keyH.downPressed == true) {
             playerY += playerSpeed;
