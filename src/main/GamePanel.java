@@ -29,7 +29,6 @@ public class GamePanel extends JPanel implements Runnable {
     int playerX = 100;
     int playerY = 100;
     int playerSpeed = 4;
-    int strafSpeed = 3;
 
     public GamePanel() {
 

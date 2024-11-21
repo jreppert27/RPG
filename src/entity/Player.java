@@ -24,17 +24,46 @@ public class Player extends Entity {
         x = 100;
         y = 100;
         speed = 4;
-        strafSpeed = 3;
     }
 
     public void update() {
+        // if (keyH.upPressed == true & keyH.rightPressed) {
+        // y -= strafSpeed;
+        // x += strafSpeed;
+        // }
+        // if (keyH.upPressed == true & keyH.leftPressed) {
+        // y -= strafSpeed;
+        // x -= strafSpeed;
+        // }
+        // if (keyH.downPressed == true & keyH.rightPressed) {
+        // y += strafSpeed;
+        // x += strafSpeed;
+        // }
+        // if (keyH.downPressed == true & keyH.leftPressed) {
+        // y += strafSpeed;
+        // x -= strafSpeed;
+        // }
+
+        // if (keyH.upPressed == true) {
+        // y -= speed;
+        // } else if (keyH.downPressed == true) {
+        // y += speed;
+        // } else if (keyH.leftPressed == true) {
+        // x -= speed;
+        // } else if (keyH.rightPressed == true) {
+        // x += speed;
+        // }
+
         if (keyH.upPressed == true) {
             y -= speed;
-        } else if (keyH.downPressed == true) {
+        }
+        if (keyH.downPressed == true) {
             y += speed;
-        } else if (keyH.leftPressed == true) {
+        }
+        if (keyH.leftPressed == true) {
             x -= speed;
-        } else if (keyH.rightPressed == true) {
+        }
+        if (keyH.rightPressed == true) {
             x += speed;
         }
     }
