@@ -1,10 +1,8 @@
 package tile;
 
 import java.io.IOException;
-
 import javax.imageio.ImageIO;
 import java.awt.Graphics2D;
-
 import main.GamePanel;
 
 public class TileManager {
@@ -14,8 +12,9 @@ public class TileManager {
 
     public TileManager(GamePanel gp) {
         this.gp = gp;
-
         tile = new Tile[10];
+
+        getTileImage();
     }
 
     public void getTileImage() {
@@ -34,7 +33,11 @@ public class TileManager {
         }
     }
 
-    public void draw(Graphics2d g2) {
-        g2.drawImage(tile[0].image, 0, 0, gp.tileSize, gp.tileSize, null);
+    public void draw(Graphics2D g2) {
+        if (tile[0] != null && tile[0].image != null) {
+            g2.drawImage(tile[0].image, 0, 0, gp.tileSize, gp.tileSize, null);
+        } else {
+            System.err.println("Tile[0] or its image is null. Ensure getTileImage() is called.");
+        }
     }
 }

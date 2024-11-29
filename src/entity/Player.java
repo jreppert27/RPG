@@ -1,6 +1,5 @@
 package entity;
 
-import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -50,33 +49,6 @@ public class Player extends Entity {
     }
 
     public void update() {
-        // if (keyH.upPressed == true & keyH.rightPressed) {
-        // y -= strafSpeed;
-        // x += strafSpeed;
-        // }
-        // if (keyH.upPressed == true & keyH.leftPressed) {
-        // y -= strafSpeed;
-        // x -= strafSpeed;
-        // }
-        // if (keyH.downPressed == true & keyH.rightPressed) {
-        // y += strafSpeed;
-        // x += strafSpeed;
-        // }
-        // if (keyH.downPressed == true & keyH.leftPressed) {
-        // y += strafSpeed;
-        // x -= strafSpeed;
-        // }
-
-        // if (keyH.upPressed == true) {
-        // y -= speed;
-        // } else if (keyH.downPressed == true) {
-        // y += speed;
-        // } else if (keyH.leftPressed == true) {
-        // x -= speed;
-        // } else if (keyH.rightPressed == true) {
-        // x += speed;
-        // }
-
         // stops movement animation if movement keys aren't being pressed
         if (keyH.upPressed == true || keyH.downPressed == true || keyH.leftPressed == true
                 || keyH.rightPressed == true) {
@@ -111,9 +83,6 @@ public class Player extends Entity {
     }
 
     public void draw(Graphics2D g2) {
-        // g2.setColor(Color.white);
-        // g2.fillRect(x, y, gp.tileSize, gp.tileSize);
-
         BufferedImage image = null;
 
         switch (direction) {
