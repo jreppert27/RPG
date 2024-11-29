@@ -77,7 +77,7 @@ public class Player extends Entity {
         // x += speed;
         // }
 
-        // stops movement animation if movenemt keys aren't being pressed
+        // stops movement animation if movement keys aren't being pressed
         if (keyH.upPressed == true || keyH.downPressed == true || keyH.leftPressed == true
                 || keyH.rightPressed == true) {
             if (keyH.upPressed == true) {
