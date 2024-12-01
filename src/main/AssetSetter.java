@@ -29,12 +29,12 @@ public class AssetSetter {
         gp.obj[3].worldX = 25 * gp.tileSize;
         gp.obj[3].worldY = 1 * gp.tileSize;
 
-        gp.obj[3] = new OBJ_Meth();
-        gp.obj[3].worldX = 6 * gp.tileSize;
-        gp.obj[3].worldY = 0 * gp.tileSize;
-
         gp.obj[4] = new OBJ_Meth();
-        gp.obj[4].worldX = 5 * gp.tileSize;
+        gp.obj[4].worldX = 6 * gp.tileSize;
         gp.obj[4].worldY = 0 * gp.tileSize;
+
+        gp.obj[5] = new OBJ_Meth();
+        gp.obj[5].worldX = 5 * gp.tileSize;
+        gp.obj[5].worldY = 0 * gp.tileSize;
     }
 }
